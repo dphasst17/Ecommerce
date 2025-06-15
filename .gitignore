@@ -1,0 +1,12 @@
+.history
+/server/http
+/server/.env
+/server/node_modules
+/client-user/.env
+/client-user/node_modules
+/client-admin/.env
+/client-admin/node_modules
+/client-admin/package-lock.json
+/client-user/package-lock.json
+/server/package-lock.json
+s_m

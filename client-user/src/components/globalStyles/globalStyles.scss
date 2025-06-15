@@ -1,0 +1,306 @@
+.dark {
+    background-color: #4d4d4d;
+    a,
+    h1,
+    h2,
+    h3,
+    p,
+    label {
+        color: #ffff;
+    }
+    .ql-snow .ql-editor div {
+        span {
+            background-color: #292828 !important;
+            font-weight: 600;
+        }
+        a {
+            color: #7ef9ff !important;
+            font-weight: 600;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(94, 93, 93, 0.889);
+    border-radius: 10px;
+}
+.slideshow {
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+    overflow: hidden;
+    .tabTitle {
+        animation: translateToY 0.3s alternate;
+    }
+    .slideshowSlider {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        transition: transform linear 000ms;
+        margin-right: 2%;
+        .slide {
+            justify-content: space-evenly;
+            align-items: center;
+            height: 400px;
+            width: 100%;
+            border-radius: 40px;
+            .image {
+                display: flex;
+                flex-wrap: wrap;
+                transform: translateY(-200%);
+                align-content: center;
+                justify-content: center;
+            }
+            .content {
+                .backgroundInf {
+                    animation: scaleImg 0.3s alternate;
+                }
+                .items {
+                    position: relative;
+                    .title {
+                        width: 100%;
+                        height: auto;
+                        font-size: 35px;
+                        cursor: pointer;
+                    }
+                    .inf {
+                        width: 100%;
+                        height: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        p {
+                            width: 100%;
+                            margin-top: 4%;
+                        }
+                    }
+
+                    button {
+                        outline: none;
+                        border: none;
+                        margin: 4% auto;
+                        cursor: pointer;
+                    }
+                    @keyframes trans {
+                        0% {
+                            border-radius: 20%;
+                            background-color: rgb(70, 117, 200);
+                            box-shadow:
+                                0 0 5px rgb(70, 117, 200),
+                                0 0 25px rgb(70, 117, 200);
+                        }
+                        100% {
+                            background-color: rgb(70, 117, 200);
+                            box-shadow:
+                                0 0 5px rgb(70, 117, 200),
+                                0 0 25px rgb(70, 117, 200),
+                                0 0 50px rgb(70, 117, 200),
+                                0 0 100px rgb(70, 117, 200),
+                                0 0 200px rgb(70, 117, 200);
+                        }
+                    }
+                }
+            }
+        }
+        .slide.active {
+            .image {
+                transform: translateY(0%);
+                .imgProduct {
+                    opacity: 1;
+                    transform: scale(1);
+                    animation: scaleImg 0.5s linear;
+                }
+            }
+            .content {
+                .items {
+                    opacity: 1;
+                    transform: translateY(0%);
+                    animation: scaleImg 0.5s alternate;
+                }
+            }
+        }
+        .slide.inactive {
+            .image {
+                transform: translateY(0%);
+                .imgProduct {
+                    opacity: 0;
+                    transition: all 0.5s linear;
+                    animation: scaleImgReverse 0.5s linear;
+                }
+            }
+            .content {
+                .items {
+                    transform: scale(0);
+                    opacity: 0;
+                    animation: hideImg 0.3s alternate forwards;
+                    @keyframes hideImg {
+                        0% {
+                            transform: scale(1);
+                            opacity: 1;
+                        }
+                        100% {
+                            transform: scale(0);
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .slideshowDots {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        justify-content: center;
+        margin-top: 2%;
+        .slideshowDot {
+            height: 6px;
+            width: 60px;
+            cursor: pointer;
+            background-color: #9e9e9e;
+            transform: skewX(-40deg);
+        }
+
+        .active {
+            height: 6px;
+            width: 60px;
+            cursor: pointer;
+            background-color: #023cdaa4;
+            animation: changeColor 0.4s linear;
+            transition: all 0.4s linear;
+            transform: skewX(-40deg);
+        }
+        @keyframes changeColor {
+            0% {
+                background-color: #9e9e9e;
+            }
+            100% {
+                background-color: #023cdaa4;
+            }
+        }
+    }
+}
+@keyframes scaleImg {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes scaleImgReverse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+@keyframes translate {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(250px, 150px);
+    }
+}
+@keyframes translateReverse {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(-250px, -150px);
+    }
+}
+@keyframes translateToY {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes stroke {
+    0% {
+        fill: transparent;
+        stroke-dashoffset: 1800;
+    }
+    50% {
+        fill: transparent;
+    }
+    100% {
+        fill: #00cbe6;
+        stroke: #00cbe6;
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes strokeReverse {
+    0% {
+        fill: #00e1ff;
+        stroke-dashoffset: 0;
+    }
+    20% {
+        fill: transparent;
+    }
+    90% {
+        stroke: #00e1ff;
+    }
+    100% {
+        fill: transparent;
+        stroke: transparent;
+        stroke-dashoffset: 1800;
+    }
+}
+@keyframes changeWidth{
+    0%{
+        width:0%
+    }
+    100%{
+        width:100%
+    }
+}
+.animateOpacity {
+    animation: transX 0.2s ease-in-out forwards;
+    @keyframes transX {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.border-nav{
+    display: block;
+    opacity: 0;
+}
+.nav-content:hover .nav-text{
+    transition:all .2s linear;
+    color:transparent;
+    background-image: linear-gradient(to right, #06b6d4, #3b82f6, #14b8a6, #14b8a6, #60a5fa, #06b6d4, #6366f1);
+}
+.nav-content:hover .border-nav{
+    opacity: 1;
+    animation: changeWidth .2s linear;
+    transition: all .2s linear;
+}
+.slick-list{
+    width:90%
+}
+.slick-prev:before, .slick-next:before{
+    font-size: 30px;
+    border-radius: 10px;
+}

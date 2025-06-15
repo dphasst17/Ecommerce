@@ -1,0 +1,10 @@
+import type { SVGProps } from 'react';
+
+const MarketeqUser7 = (props: SVGProps<SVGSVGElement>): JSX.Element => {
+    return (<svg className='w-[80px] h-[70px]' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 50 50" {...props}><g fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}><path stroke="#344054" d="M16.667 28.542a14.58 14.58 0 0 0-8.334 13.125a2.083 2.083 0 0 0 2.084 2.083h29.166a2.084 2.084 0 0 0 2.084-2.083a14.58 14.58 0 0 0-8.334-13.188"></path><path stroke="#306cfe" d="M25 31.25c6.904 0 12.5-5.596 12.5-12.5S31.904 6.25 25 6.25s-12.5 5.596-12.5 12.5s5.596 12.5 12.5 12.5"></path></g></svg>);
+}
+
+const SolarUserPlusOutline = (props: SVGProps<SVGSVGElement>): JSX.Element => {
+    return (<svg className='w-[80px] h-[70px]' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="#3abb72" fillRule="evenodd" d="M7.25 6a4.75 4.75 0 1 1 9.5 0a4.75 4.75 0 0 1-9.5 0M12 2.75a3.25 3.25 0 1 0 0 6.5a3.25 3.25 0 0 0 0-6.5" clipRule="evenodd"></path><path fill="#3abb72" d="M18 13.917a.75.75 0 0 1 .75.75v.583h.583a.75.75 0 0 1 0 1.5h-.583v.583a.75.75 0 0 1-1.5 0v-.583h-.583a.75.75 0 0 1 0-1.5h.583v-.583a.75.75 0 0 1 .75-.75"></path><path fill="#3abb72" fillRule="evenodd" d="M14.775 12.513A14.487 14.487 0 0 0 12 12.25c-2.313 0-4.445.526-6.024 1.414C4.42 14.54 3.25 15.866 3.25 17.5v.102c-.001 1.162-.002 2.62 1.277 3.662c.629.512 1.51.877 2.7 1.117c1.192.242 2.747.369 4.773.369c2.868 0 4.81-.254 6.12-.741c1.179-.44 1.877-1.082 2.25-1.892a4.75 4.75 0 1 0-5.596-7.604M6.71 14.972c-1.34.753-1.96 1.677-1.96 2.528c0 1.308.04 2.044.723 2.6c.37.302.99.597 2.05.811c1.057.214 2.502.339 4.476.339c2.578 0 4.24-.213 5.311-.55a4.751 4.751 0 0 1-3.555-6.835A13.284 13.284 0 0 0 12 13.75c-2.105 0-3.973.482-5.289 1.222M14.751 16a3.25 3.25 0 1 1 6.5 0a3.25 3.25 0 0 1-6.5 0" clipRule="evenodd"></path></svg>);
+}
+export { MarketeqUser7, SolarUserPlusOutline };
