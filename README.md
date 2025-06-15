@@ -29,7 +29,7 @@ An eCommerce web application for selling laptops and accessories. Built using mo
 - View orders and customer info
 
 ## 📁 Project Structure
-
+```
 .
 ├── client-admin/ # React frontend admin
 │ ├── src/
@@ -60,6 +60,7 @@ An eCommerce web application for selling laptops and accessories. Built using mo
 │ └── docker-compose.yml
 │ 
 └── README.md # Project description
+```
 
 ## 🛍 Main Features
 
